@@ -34,7 +34,7 @@ nav > #urls {
     margin-top: 10px;
 }
 nav > #urls > a {
-    padding: 8px;
+    padding: 6px;
 }
 nav a:hover {
     transition: 0.25s;
@@ -55,8 +55,8 @@ main {
 }
 main .logo {
     user-select: none;
-    width: 63vh;
-    height: 50vh;
+    width: 300px;
+    height: 250px;
     max-height: 500px;
 }
 main #whoiam p {
@@ -124,5 +124,11 @@ main #whoiam p {
     .service-box img {
         width: 75px;
         height: 75px;
+    }
+}
+@media (max-width: 300px) {
+    main .logo {
+        width: 200px;
+        height: 150px;
     }
 }
