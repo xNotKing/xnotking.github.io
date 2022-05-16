@@ -1,56 +1,128 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
 * {
     margin: auto;
     padding: auto;
-    scroll-behavior: smooth;
-}
-body {
-    font-size: 17px;
-    z-index: 1;
     word-wrap: break-word;
     word-break: break-word;
-    scroll-behavior: smooth;
 }
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    background: #fff;
+    color: #000;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding-bottom: 1em;
+}
+/*navbar*/
 nav {
-    font-family: 'Nunito Sans', sans-serif;
-    color: #fff;
-    z-index: 99999;
+    background-color: #111111;
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
-nav #urls {
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+nav > #urls {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 nav > #urls > a {
     padding: 8px;
-    text-decoration: none;
-    color: #fff;
 }
-highlight {
-    color: rgb(62, 70, 158);
+nav a:hover {
+    transition: 0.25s;
+    color: #e2e2e2;
 }
-.start {
-    font-family: 'Bebas Neue', cursive;
-    color: #fff;
-    position: absolute;
-    top: 0px;
-    left: 0px;
+.hireme {
+    background: #e8dc2a;
+    color: #000;
+    border-radius: 30px;
+}
+.hireme:hover {
+    color: #000;
+}
+main {
     width: 100%;
-    height: 1000px;
-    background: linear-gradient(90deg, rgb(71, 94, 115), #5298b0);
+    margin-top: 55px;
     text-align: center;
 }
-.start p {
-    margin-top: 200px;
-    font-size: 36px;
+main .logo {
+    user-select: none;
+    width: 63vh;
+    height: 50vh;
+    max-height: 500px;
 }
-#aboutme {
-    opacity: 0;
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 18px;
-    margin-top: 1200px;
+main #whoiam p {
+    padding: 0.5rem 1rem;
+    font-size: 14px;
+    width: 80%;
+
+}
+#whoiam {
+    width: 100%;
+}
+#whoiam h1 {
     text-align: center;
+    font-size: 26px;
+}
+.services {
+    margin-top: 25px;
+    align-self: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+.service-box {
+    margin: 100px auto;
+    width: 80%;
+    display: flex;
+    max-width: 700px;
+    border-radius: 3px;
+    padding: 0.5 1rem;
+    min-height: 100px;
+    margin-top: 20px;
+    text-align: center;
+}
+.service-box .content {
+    margin: 20px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(100% - 100px);
+    text-align: center;
+    margin: 10px;
+    max-width: 450px;
+}
+.service-box img {
+    width: 100px;
+    height: 100px;
+}
+.service-box h2 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 17px;
+} 
+.service-box p {
+    text-align: center;
+    line-height: 20px;
+    font-size: 14px;
+    word-spacing: 0.1em;
+    letter-spacing: 0.03em;
+    word-wrap: break-word;
+    display: flex;
     width: 90%;
+    max-width: 700px;
+    margin: 0;
 }
-#aboutme h2 {
-    font-size: 36px;
+@media (max-width: 700px) {
+    .service-box img {
+        width: 75px;
+        height: 75px;
+    }
 }
