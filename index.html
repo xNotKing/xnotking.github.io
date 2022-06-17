@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>xnotkingdev_</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="icon" href="cat.jpg">
+    <title>xnotkingdev</title>
+    <link rel="icon" href="cat.jpg" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/e4d71b6741.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">    
     <meta name="og:title" content="xnotkingdev">
     <meta name="og:description" content="Welcome to xnotkingdev's portfolio, I'm a web developer with 1 year of experience">
     <meta name="theme-color" content="#111111">
@@ -16,84 +17,56 @@
     <meta name="og:image" content="logo.png">
 </head>
 <body>
-    <nav>
-        <div id="urls">
-            <a href="https://xnotking.github.io">Home</a>
-            <a href="https://xnotking.github.io/blogs">Blogs</a>
+    <main class="container">
+        <nav>
+            <img src="logo.png" class="logo" onclick="location.href = 'https://xnotking.github.io'">
+            <a href="https://twitter.com/xnotkingdev_" target="_blank"><i class="fab fa-twitter fa"></i></a>
+        </nav>
+        <div class="content">
+            <h3 class="sec-title">Últimos blogs</h3>
+            <article class="blogs">
+                <div class="blog">
+                    <a href="./talk/php-is-not-dead">
+                    <img src="cat.jpg" alt="xnotkingdev php">
+                    <div class="blog-content">
+                    
+                    <h2>PHP no esta muerto</h2>
+                    <div class="date">17 junio</div>
+                    </a>
+                </div>
+                
+                </div>
+            </article>
+            <h3 class="sec-title">Recomiendo</h3>
+            <article class="blogs">
+                <div class="blog">
+                    <a href="httos://sololearn.com">
+                    <img src="https://blob.sololearn.com/avatars/sololearn.png" alt="sololearn" loading="lazy">
+                <div class="blog-content">
+                    <h2>SoloLearn</h2>
+                    <time>Aprende HTML, CSS, JavaScript y sus frameworks, o PHP</time>
+                    </a>
+                </div>
+                </div>
+                <div class="blog">
+                    <a href="https://replit.com">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Repl.it_logo.svg/768px-Repl.it_logo.svg.png" alt="sololearn" loading="lazy">
+                <div class="blog-content">
+                    <h2>Replit</h2>
+                    <time>Empieza tu pagina gratuitamente en mas de 50 lenguajes.</time>
+                    </a>
+                </div>
+                </div>
+            </article>
         </div>
-    </nav>
-    <main>
-        <img src="logo.png" class="logo">
-        <section id="whoiam">
-        <h1>WHO I AM</h1>
+        <h3 class="sec-title">Quién soy?</h3>
         <p>
-            I'm a website developer with <strong>1 year of experience</strong>
-            I live in Spain, Badalona.
-            I can definetly build your site if you want to hire me!
-            <br/><br/>I work at projects like ReplChat, SolarCraft Network which is a minecraft server,
-            Arduino bot (a discord bot) and I also made a site for a cafe.
+        Soy un programador web catalán con mas de 1 año de experiencia en el desarrollo de aplicaciones web. Me gusta ayudar a otras personas con sus projectos o dudas dentro del desarollo web.
         </p>
-         </section>
-        <div class="services">
-            <div class="service-box">
-            <img src="fastclock.png">
-            <div class="content">
-                <h2>FAST</h2>
-                <p>
-                    I will try to get you the final result as soon as possible, time is not a problem
-                    if you want me to add anything to your site you can tell me it without worrying about my time.
-                </p>
-            </div>
-            </div>
-            <div class="service-box">
-                <img src="responsive.png">
-            <div class="content">
-                <h2>RESPONSIVE</h2>
-                <p>
-                    I will make your site look good and I guarantee a compatible site for mobile devices with more than 250px.
-                </p>
-            </div>
-            </div>
-            <div class="service-box">
-            <img src="FAST.png">
-            <div class="content">
-                <h2>GOOD PERFORMANCE</h2>
-                <p>
-                    I'll make sure that the site works fast with technologies like PHP 8.0.8 and Laravel.
-                </p>
-            </div>
-            </div>
-        </div>
-        <div class="projects">
-            <h2>My projects</h2><br><br>
-            <div class="newpost">
-                <a href="https://replit.com/@xNotKing/ReplChat?v=1" class="clicka" title="Click to see" onerror="this.remove()" loading="lazy">
-                    <img src="https://replchat.xnotking.repl.co/Replchat.png" alt="ReplChat">
-                    <div class="content">
-                        <h3>ReplChat</h3>
-                        <p>A chat project made in repl.it, with laravel, php 8.1.6, ajax and javascript.</p>
-                    </div>
-                </a>
-            </div>
-            <div class="newpost">
-                <a href="https://solarcraft.es" class="clicka" title="Click to see" onerror="this.remove()" loading="lazy">
-                    <img src="https://solarcraft.es/img/solarcraft.png" alt="SolarCraft">
-                    <div class="content">
-                        <h3>SolarCraft</h3>
-                        <p>SolarCraft is a Minecraft Network made by xDonLix on youtube.</p>
-                    </div>
-                </a>
-            </div>
-            <div class="newpost">
-                <a href="https://arduinobot.tk" class="clicka" title="Click to see" loading="lazy">
-                    <img src="https://arduinobot.tk/pfp.png" alt="Arduino" onerror="this.remove()">
-                    <div class="content">
-                        <h3>Arduino Bot</h3>
-                        <p>Arduino is a interactive discord bot that includes commands like /kiss or games.</p>
-                    </div>
-                </a>
-            </div>
-        </div>
+        <h3 class="sec-title">Con que trabajo?</h3>
+        <p>
+        Trabajo con HTML, CSS, JavaScript, PHP, React, Node.js, Vue.js, jQuery, Laravel, TypeScript, SQL dentro de Repl.it o Visual Studio Code.
+        </p>
     </main>
 </body>
 </html>
