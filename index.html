@@ -7,12 +7,13 @@
     <title>xnotkingdev</title>
 	<link rel="stylesheet" href="index.css" type="text/css">
     <link rel="icon" href="cat.jpg" type="image/x-icon">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer" defer></script>
     <script src="https://kit.fontawesome.com/e4d71b6741.js" crossorigin="anonymous" defer></script>
 	<meta name="og:title" content="xnotkingdev">
     <meta name="og:description" content="Hola soy xnotkingdev_ un desarollador web con mas de 1 año de experiencia enfocado a la web.">
 	<meta name="og:image" content="logo.png">
     <meta name="theme-color" content="#a2703f">
-    <meta name="keywords" content="build your site, xnotking, xnotkingdev_, xnotkingdev, website developer, site developer, solarcraft, arduino, cafeluna, luna cafe, developers with 1 year or more of experience, hugo, php, laravel, wordpress, nodejs, typescript, bun, bun.sh, html, css, js, html css js, dev">
+    <meta name="keywords" content="build your site, xnotking, xnotkingdev_, xnotkingdev, website developer, site developer, solarcraft, arduino, cafeluna, luna cafe, developers with 1 year or more of experience, hugo, php, laravel, wordpress, nodejs, typescript, bun, bun.sh, html, css, js, html css js, dev, badalona">
     <meta name="title" content="xnotkingdev">
     <meta name="description" content="Hola soy xnotkingdev_ un desarollador web con mas de 1 año de experiencia enfocado a la web.">
 </head>
@@ -65,8 +66,17 @@
         </p>
         <h3 class="sec-title">Con que trabajo?</h3>
         <p>
-        Trabajo con HTML, CSS, JavaScript, PHP, React, Node.js, Vue.js, jQuery, Laravel, TypeScript, SQL dentro de Repl.it o Visual Studio Code.
+        Trabajo con HTML, CSS, JaaScript, PHP, React, Node.js, Vue.js, jQuery, Laravel, TypeScript, SQL dentro de Repl.it o Visual Studio Code.
         </p>
-    </main>
+    </main> 
+	<script>
+	$('a').click(function (event) {
+    // Cancel event
+    event.preventDefault();
+    // Load page content
+	window.history.pushState("", "", $(this).attr("href"));
+    $('html').load($(this).attr('href'));
+	}); 
+	</script>
 </body>
 </html>
