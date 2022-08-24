@@ -6,6 +6,6 @@ if(!$(this).attr("href").startsWith("https://")) {
 	window.history.pushState("", "", $(this).attr("href"));
 	$('body').load($(this).attr('href'));
 } else {
-	window.open = ($(this).attr('href'));
+	window.open = $(this).attr('href');
 }
 }); 
