@@ -65,16 +65,18 @@ nav .fab {
     display: block;
 }
 .blogs {
-    display: block;
+    display: flex;
+	flex-direction: column;
 }
 .blog {
-    display: inline-flex;
+    display: flex;
     flex-shrink: 1;
     text-align: start;
     padding: 16px;
     border-radius: 4px;
 	transition: 140ms;
 	cursor: pointer;
+	margin-left: 0px;
 }
 .blog:hover {
     background: #f3f3f3;
@@ -86,6 +88,7 @@ nav .fab {
 .blog img {
 	width: 48px;
     height: 48px;
+	object-fit: cover;
 }
 .blog-content {
     margin-left: 5vmin;
