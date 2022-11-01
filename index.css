@@ -8,13 +8,16 @@
 body {
     font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
     font-size: 16px;
-    padding-bottom: 20px;
     min-width: 100%;
     text-align: center;
     background-color: #fff;
 }
+header, header p{
+    margin: auto;
+    text-align: center;
+}
 p {
-    margin: 0;
+    margin: 0 0 20px;
     padding: 0;
     max-width: 400px;
     display: block;
@@ -27,15 +30,21 @@ p {
     padding: 0 16px;
 }
 nav {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
     height: 40px;
     z-index: 99999;
 }
-nav .fab{
+nav .fab, nav p img{
+    margin-left: 20px;
     margin-top: 27px;
     color: #00acee;
     font-size: 24px;
+    width: 24px;
+    height: 24px;
 }
-nav .fab {
+nav .fab, nav p img{
     float: right;
 }
 .logo {
@@ -51,7 +60,7 @@ nav .fab {
 	transform: scale(1.1);
 }
 @media (max-width: 300px) {
-    nav .fab{
+    nav p .fab, nav p img{
         display: none;
     }
 }
@@ -96,4 +105,21 @@ nav .fab {
 .blog-content h2 {
     font-size: 18px;
     font-weight: 400;
+}
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    color: #fff;
+    background-color: #303031;
+}
+footer img{
+    vertical-align: middle;
+    width: 2.5vh;
+    height: 2.5vh;
+}
+footer p {
+    margin: 0px;
 }

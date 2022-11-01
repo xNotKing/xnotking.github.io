@@ -7,60 +7,64 @@
 }
 body {
     font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
-    font-size: 18px;
-    padding-bottom: 20px;
+    font-size: 16px;
     min-width: 100%;
     text-align: center;
     background-color: #fff;
 }
+header, header p{
+    margin: auto;
+    text-align: center;
+}
 p {
-    margin: 0;
-    padding: 0;
-    max-width: 700px;
+    margin: auto auto 20px;
+    padding: auto;
+    max-width: 1200px;
     display: block;
     text-align: start;
 }
-p img {
-    object-fit: contain;
-    max-height: 400px;
-    margin: 10px 10px 0 0;
-}
 .container {
-    text-align: start;
+    text-align: center;
     width: 90%;
     max-width: 1300px;
     padding: 0 16px;
 }
 nav {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
     height: 40px;
     z-index: 99999;
 }
-nav .fab{
+nav p {
+    margin-right: 0px;
+}
+nav .fab, nav p img{
+    margin-left: 20px;
     margin-top: 27px;
     color: #00acee;
     font-size: 24px;
+    width: 24px;
+    height: 24px;
 }
-nav .fab {
+nav .fab, nav p img{
     float: right;
 }
 .logo {
     margin-top: -20px;
     margin-left: -25px;
+	object-fit: contain;
+	width: auto;
     height: 120px;
+	transition: 0.25s;
+	cursor: pointer;
 }
-.hide-link {
-    color: #000;
-    text-decoration: none;
-}
-.red-heart {
-    color: red;
-}
-.w-6 {
-    vertical-align: middle;
-    width: 1.5em;
+.logo:hover {
+	transform: scale(1.1);
 }
 @media (max-width: 300px) {
-    nav .fab{
+    nav p .fab, nav p img{
         display: none;
     }
 }
@@ -131,9 +135,12 @@ INTERESTING BLOGS
     border-radius: 15px;
     background-color: #f8f5f5;
 }
-
 .other-blog h3 {
     font-size: 18px;
+}
+.other-blog {
+    text-decoration: none;
+    color: #000;
 }
 .article-banner .other-blog img{
     width: 100%;
@@ -174,8 +181,19 @@ INTERESTING BLOGS
 FOOTER
 */
 footer {
-    margin-top: 40px;
-    font-size: 16px;
-    font-weight: 600;
-    color: rgb(103, 99, 99);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    color: #fff;
+    background-color: #303031;
+}
+footer img{
+    vertical-align: middle;
+    width: 2.5vh;
+    height: 2.5vh;
+}
+footer p {
+    margin: 0px;
 }

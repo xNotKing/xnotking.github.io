@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+Allow: php-no-es-malo/*
+Allow: cual-es-el-mejor-lenguaje/*
