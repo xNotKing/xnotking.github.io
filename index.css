@@ -47,7 +47,7 @@ nav .fab, nav p img{
 nav .fab, nav p img{
     float: right;
 }
-.logo, nav a{
+.logo{
     margin-top: -20px;
     margin-left: -25px;
 	object-fit: contain;
