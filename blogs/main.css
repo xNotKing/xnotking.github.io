@@ -30,7 +30,10 @@ p {
     padding: 0 16px;
 }
 nav {
-    width: 100%;
+    text-align: start;
+    width: 90%;
+    max-width: 1300px;
+    padding: 0 16px;
     margin-top: 40px;
     display: flex;
     flex-direction: row;
