@@ -12,15 +12,21 @@ body {
     text-align: center;
     background-color: #fff;
 }
+header {
+    width: 100%;
+}
 header, header p{
-    width: 90%;
+    max-width: 95%;
     max-width: 1300px;
     padding: 0 16px;
     margin: auto;
     margin-top: 40px;
     text-align: center;
 }
-p {
+header h1 {
+    font-size: 2rem;
+}
+main p {
     margin: 0 0 20px;
     padding: 0;
     max-width: 400px;
@@ -130,4 +136,21 @@ footer img{
 }
 footer p {
     margin: 0px;
+}
+/*
+RESPONSIVE
+*/
+@media (max-width: 470px) {
+    .blog {
+        display: flex;
+        flex-direction: column;
+    }
+    .blog img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+    .blog-content{
+        margin-left: 0px;
+    }
 }
