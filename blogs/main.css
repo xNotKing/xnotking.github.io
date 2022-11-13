@@ -16,9 +16,10 @@ header, header p{
     margin: auto;
     text-align: center;
 }
-p {
+main p {
     margin: auto auto 20px;
     padding: auto;
+    padding: 3px;
     max-width: 1200px;
     display: block;
     text-align: start;
