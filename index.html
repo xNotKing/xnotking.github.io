@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="index.css" type="text/css">
     <link rel="shortcut icon" href="cat.jpg" type="image/x-icon">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer" defer></script>
+    <!--
 	<script defer type="text/javascript">
         window.addEventListener("load", () => {
             $('a').click(async function (event) {
@@ -15,15 +16,16 @@
                 event.preventDefault();
                 // Load page content
                 if(!$(this).attr("href").startsWith("https://")) {
-                    await $('body').load($(this).attr('href'));
-                    window.history.pushState("", "", $(this).attr("href"));
-                    console.log("Loaded")
+                    await $('html').load($(this).attr('href'));
+                    await $('head').append( $('<link rel="stylesheet" type="text/css" />').attr("/index.css"));
+                    await  window.history.pushState("", "", $(this).attr("href"));
                 } else {
                     window.open($(this).attr('href'));
                 }
             });
         }) 
     </script>
+    -->
     <!-- SEO -->
     <meta name="title" content="xnotkingdev: Desarollador web">
     <meta name="description" content="Hola, soy xnotkingdev, un desarollador backend y frontend en Barcelona con mas de 1 año de experiencia.">
