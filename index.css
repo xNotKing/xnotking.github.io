@@ -8,16 +8,16 @@
 body {
     font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
     font-size: 16px;
-    min-width: 100%;
     text-align: center;
-    background-color: #fff;
+    background-color: rgb(251, 245, 233);
 }
 header {
+    margin-top: 200px;
     width: 100%;
 }
-header, header p{
+header p{
     max-width: 95%;
-    max-width: 1300px;
+    max-width: 1300px;  
     padding: 0 16px;
     margin: auto;
     margin-top: 40px;
@@ -40,19 +40,29 @@ main p, nav p{
     padding: 0 16px;
 }
 nav {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    background-color: rgba(183, 134, 29, 0.1);
     text-align: start;
-    width: 90%;
-    max-width: 1300px;
+
+    width: 100%;
+    height: 120px;
+
     padding: 0 16px;
-    margin-top: 0px;
     display: flex;
     flex-direction: row;
-    height: 40px;
+    justify-content: center;
+    align-items: center;
     z-index: 99999;
+    transition: 0.25s;
+}
+nav:hover {
+    background-color: rgba(183, 134, 29, 0.3);
 }
 nav .fab, nav p img{
     margin-left: 20px;
-    margin-top: 27px;
     color: #00acee;
     font-size: 24px;
     width: 24px;
@@ -62,7 +72,6 @@ nav .fab, nav p img{
     float: right;
 }
 .logo{
-    margin-top: -20px;
     margin-left: -25px;
 	object-fit: contain;
 	width: auto;
