@@ -61,6 +61,7 @@ nav:hover {
     background-color: rgba(183, 134, 29, 0.3);
 }
 nav p {
+    margin: 0 0 20px;
     margin-right: 0px;
 }
 nav .fab, nav p img{
@@ -75,7 +76,6 @@ nav .fab, nav p img{
     float: right;
 }
 .logo {
-    margin-top: -20px;
     margin-left: -25px;
 	object-fit: contain;
 	width: auto;
