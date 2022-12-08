@@ -11,34 +11,9 @@ body {
     text-align: center;
     background-color: rgb(251, 245, 233);
 }
-header {
-    margin-top: 200px;
-    width: 100%;
-}
-header p{
-    max-width: 95%;
-    max-width: 1300px;  
-    padding: 0 16px;
-    margin: auto;
-    margin-top: 40px;
-    text-align: center;
-}
-header h1 {
-    font-size: 2rem;
-}
-main p, nav p{
-    margin: 0 0 20px;
-    padding: 0;
-    max-width: 400px;
-    display: block;
-    text-align: start;
-}
-.container {
-    text-align: start;
-    width: 90%;
-    max-width: 1300px;
-    padding: 0 16px;
-}
+/*
+NAV BAR
+*/
 nav {
     position: absolute;
     top: 0px;
@@ -71,6 +46,14 @@ nav .fab, nav p img{
 nav .fab, nav p img{
     float: right;
 }
+@media (max-width: 300px) {
+    nav p .fab, nav p img{
+        display: none;
+    }
+}
+/*
+NAV LOGO
+*/
 .logo{
     margin-left: -25px;
 	object-fit: contain;
@@ -82,11 +65,6 @@ nav .fab, nav p img{
 .logo:hover {
 	transform: scale(1.1);
 }
-@media (max-width: 300px) {
-    nav p .fab, nav p img{
-        display: none;
-    }
-}
 .content {
     margin-top: 50px;
 }
@@ -96,39 +74,91 @@ nav .fab, nav p img{
     font-size: 20px;
     display: block;
 }
+/*
+HEADER
+*/
+header {
+    margin-top: 200px;
+    width: 100%;
+}
+
+header p {
+    max-width: 95%;
+    max-width: 1300px;
+    padding: 0 16px;
+    margin: auto;
+    margin-top: 40px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+main p,
+nav p {
+    margin: 0 0 20px;
+    padding: 0;
+    max-width: 400px;
+    display: block;
+    text-align: start;
+}
+
+.container {
+    text-align: start;
+    width: 90%;
+    max-width: 1300px;
+    padding: 0 16px;
+}
+/*
+BLOGS
+*/
 .blogs {
     display: flex;
 	flex-direction: column;
 }
-.blog {
-    display: flex;
-    flex-shrink: 1;
-    text-align: start;
-    padding: 16px;
-    border-radius: 4px;
-	transition: 140ms;
-	cursor: pointer;
-	margin-left: 0px;
-}
-.blog:hover {
-    background: #f3f3f3;
-}
-.blog a {
-    color: #000;
+.blogs a {
+    margin-left: 0px;
     text-decoration: none;
+    color: black;
 }
-.blog img {
-	width: 48px;
-    height: 48px;
-	object-fit: cover;
+/*
+BLOG CARDS
+*/
+
+blog-card {
+    display: flex;
+    flex-direction: row;
+    margin-left: 0px;
+    position: relative;
 }
-.blog-content {
+blog-readtime {
+    position: absolute;
+    top: -35px;
+    left: 0px;
+    display: none;
+    background: #4441ff;
+    padding: 8px;
+    border-radius: 7px;
+    color: #fff;
+}
+.blogs a:hover blog-readtime {
+    display: block;
+}
+blog-container {
     margin-left: 5vmin;
 }
-.blog-content h2 {
-    font-size: 18px;
-    font-weight: 400;
+blog-container h2 {
+    font-size: 24px;
 }
+blog-img img {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+}
+/*
+FOOTER
+*/
 footer {
     display: flex;
     flex-direction: row;
@@ -167,6 +197,7 @@ RESPONSIVE
 RECOMMENDED
 */
 .recommended img {
-    width: 100%;
+    object-fit: contain;
+    width: 100px;
     height: 100px;
 }

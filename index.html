@@ -1,37 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>xnotkingdev: Desarollador web</title>
-	<link rel="stylesheet" href="index.css" type="text/css">
+    <link rel="stylesheet" href="index.css" type="text/css">
     <link rel="shortcut icon" href="cat.jpg" type="image/x-icon">
     <!-- SEO -->
     <meta name="title" content="xnotkingdev: Desarollador web">
-    <meta name="description" content="Hola, soy xnotkingdev, un desarollador backend y frontend en Barcelona con mas de 1 año de experiencia.">
+    <meta name="description"
+        content="Hola, soy xnotkingdev, un desarollador backend y frontend en Barcelona con mas de 1 año de experiencia.">
     <meta name="theme-color" content="#a2703f">
-    <meta name="keywords" content="build your site, xnotking, xnotkingdev_, xnotkingdev, website developer, site developer, solarcraft, arduino, cafeluna, luna cafe, developers with 1 year or more of experience, hugo, php, laravel, wordpress, nodejs, typescript, bun, bun.sh, html, css, js, html css js, dev, badalona, xnotking.vercel.app, xnotking.github.io, desarollador web en barcelona, xnotkingdev desarollador web, xnotkingdev.github.io, xnotkingdev blog, xnotkingdev ">
+    <meta name="keywords"
+        content="build your site, xnotking, xnotkingdev_, xnotkingdev, website developer, site developer, solarcraft, arduino, cafeluna, luna cafe, developers with 1 year or more of experience, hugo, php, laravel, wordpress, nodejs, typescript, bun, bun.sh, html, css, js, html css js, dev, badalona, xnotking.vercel.app, xnotking.github.io, desarollador web en barcelona, xnotkingdev desarollador web, xnotkingdev.github.io, xnotkingdev blog, xnotkingdev ">
     <!-- OG -->
     <meta property="og:type" content="site">
     <meta property="og:url" content="xnotkingdev">
-	<meta name="og:image" content="logo.png">
+    <meta name="og:image" content="logo.png">
     <meta property="og:title" content="xnotkingdev">
-    <meta property="og:description" content="Hola, soy xnotkingdev, un desarollador backend y frontend en Barcelona con mas de 1 año de experiencia.">
+    <meta property="og:description"
+        content="Hola, soy xnotkingdev, un desarollador backend y frontend en Barcelona con mas de 1 año de experiencia.">
     <!-- TWITTER -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@xnotkingdev_">
     <meta name="twitter:title" content="xnotkingdev">
-    <meta name="twitter:description" content="xnotkingdev, un desarollador Back-End y Front-End en Barcelona.">
+    <meta name="twitter:description" content="Hola, soy xnotkingdev, un desarollador Back-End y Front-End en Barcelona.">
     <meta name="twitter:image" content="/cat.jpg">
 </head>
+
 <body>
-    <noscript>Enable JavaScript Please</noscript>
     <nav>
-        <img src="logo.png" class="logo" decoding="async" alt="xnotkingdev web developer logo png image" onclick="location.href = '/'">
+        <img src="/logo.png" class="logo" decoding="async" alt="xnotkingdev web developer logo png image"
+            onclick="location.href = '/'">
         <p>
-        <a href="https://github.com/xnotkingdev" target="_blank"  rel="nofollow" title="Mi github"><img src="github.svg" alt="Echale un vistazo a el github de xnotkingdev"></a>
-        <a href="https://twitter.com/xnotkingdev_" target="_blank" rel="nofollow" title="Mi twitter"><img src="twitter.svg" alt="Echale un vistazo a el twitter de xnotkingdev"></a>
+            <a href="https://github.com/xnotkingdev" target="_blank" rel="nofollow" title="Mi github">
+                <img src="/github.svg" alt="Echale un vistazo a el github de xnotkingdev">
+            </a>
+            <a href="https://twitter.com/xnotkingdev_" target="_blank" rel="nofollow" title="Mi twitter">
+                <img src="/twitter.svg" alt="Echale un vistazo a el twitter de xnotkingdev">
+            </a>
         </p>
     </nav>
     <header style="margin-top: 200px;">
@@ -42,68 +51,69 @@
         <div class="content">
             <h3 class="sec-title">Últimos blogs</h3>
             <article class="blogs">
-            <div class="blog">
-                    <a href="/blogs/cual-es-el-mejor-lenguaje/">
-                    <img src="images/thumbnails/BestLang.webp" alt="xnotkingdev python js mejor lenguaje" decoding="async" loading="lazy">
-                <div class="blog-content">
-                    
-                    <h2>¿Cuál es el mejor lenguaje de programación?</h2>
-                    <div class="date">25 Agosto</div>
-                    </a>
-                </div>
-			</div>
-                <div class="blog">
-                    <a href="/blogs/php-no-es-malo/">
-                    <img src="images/thumbnails/PHP.webp" alt="xnotkingdev php" decoding="async">
-                    <div class="blog-content">
-                    
-                    <h2>PHP no esta muerto y te digo por qué</h2>
-                    <div class="date">17 junio</div>
-                    </a>
-                </div>
-				</div>
+                <a href="/blogs/php-no-es-malo/">
+                    <blog-card>
+                        <blog-readtime>1 minuto</blog-readtime>
+                        <blog-img>
+                            <img src="/images/php-folder.svg" alt="xnotkingdev blog por qué php no es malo" loading="lazy">
+                        </blog-img>
+                        <blog-container>
+                            <h2>!PHP no es malo!</h2>
+                            <span>04/12/22</span>
+                        </blog-container>
+                    </blog-card>
+                </a>
+                <a href="/blogs/cual-es-el-mejor-lenguaje/">
+                    <blog-card>
+                        <blog-readtime>1 minuto</blog-readtime>
+                        <blog-img>
+                            <img src="/images/BestLang.webp" alt="xnotkingdev blog por qué php no es malo" loading="lazy">
+                        </blog-img>
+                        <blog-container>
+                            <h2>¿Cuál es el mejor lenguaje de programación?</h2>
+                            <span>04/12/22</span>
+                        </blog-container>
+                    </blog-card>
+                </a>
             </article>
-			</div>
-            <h3 class="sec-title">Recomiendo</h3>
-            <article class="blogs recommended">
-                <div class="blog">
-                    <a href="https://sololearn.com" target="_blank" rel="nofollow">
-                    <img src="https://blob.sololearn.com/avatars/sololearn.png" alt="sololearn" loading="lazy">
-                <div class="blog-content">
-                    <h2>SoloLearn</h2>
-                    <time>Aprende HTML, CSS, JavaScript y sus frameworks, o PHP</time>
-                    </a>
-                </div>
-                </div>
-                <div class="blog">
-                    <a href="https://replit.com" target="_blank" rel="nofollow">
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Repl.it_logo.svg/768px-Repl.it_logo.svg.png" alt="sololearn" loading="lazy">
-                <div class="blog-content">
-                    <h2>Replit</h2>
-                    <time>Practica con mas de 50 lenguajes de programación en la nube.</time>
-                    </a>
-                </div>
-                </div>
-            </article>
+        </div>
+        <h3 class="sec-title">Recomiendo</h3>
+        <article class="blogs recommended">
+           <a href="https://sololearn.com" rel="nofollow" target="_blank">
+                <blog-card>
+                    <blog-img>
+                        <img src="/images/sololearn.webp" alt="xnotkingdev sololearn aprende mas de 20 lenguajes de programación.">
+                    </blog-img>
+                    <blog-container>
+                        <h2>SoloLearn</h2>
+                        <span>Aprende mas de 20 lenguajes de programación con retos.</span>
+                    </blog-container>
+                </blog-card>
+           </a>
+        </article>
         </div>
         <h3 class="sec-title">¿Quién soy?</h3>
         <p>
-        Soy un programador web catalán con mas de 1 año de experiencia en el desarrollo de aplicaciones web. Me gusta ayudar a otras personas con sus projectos o dudas dentro del desarollo web.
+            Soy un programador web catalán con mas de 1 año de experiencia en el desarrollo de aplicaciones web. Me
+            gusta ayudar a otras personas con sus projectos o dudas dentro del desarollo web.
         </p>
         <h3 class="sec-title">¿Con qué trabajo?</h3>
         <p>
-        Trabajo con HTML, CSS, JavaScript (incluyendo Node.js), PHP, Wordpress, Git, Python, Astro.js
+            Trabajo con HTML, CSS, JavaScript (incluyendo Node.js), PHP, Wordpress, Git, Python, Astro.js.
         </p>
         <p>Tambien tengo conocimientos de React, Next y Vue.</p>
         <h3 class="sec-title">¿Cómo contactarme?</h3>
         <p>
-            Puedes contactarme por mi mail, <a href="https://mail:xnotking1@gmail.com/" rel="nofollow">xnotking1@gmail.com</a> o donde tendras una respuesta mas temprana, <a href="https://twitter.com/xnotkingdev_" rel="nofollow">@xnotkingdev_</a> en twitter.
+            Puedes contactarme por mi mail, <a href="https://mail:xnotking1@gmail.com/"
+                rel="nofollow">xnotking1@gmail.com</a> o donde tendras una respuesta mas temprana, <a
+                href="https://twitter.com/xnotkingdev_" rel="nofollow">@xnotkingdev_</a> en twitter.
         </p>
-    </main> 
+    </main>
     <footer>
         <p>
             Hecho con <img src="heart.svg" alt="xnotkingdev heart svg"> por xnotkingdev_
         </p>
     </footer>
 </body>
+
 </html>
