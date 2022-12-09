@@ -1,3 +1,8 @@
+:root {
+    --nav-color: #ededed;
+    --nav-hover-color: #ededed;
+    --body-color: #fafafa;
+}
 * {
     margin: auto;
     padding: auto;
@@ -9,7 +14,16 @@ body {
     font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
     font-size: 16px;
     text-align: center;
-    background-color: rgb(251, 245, 233);
+    background-color: var(--body-color);
+}
+/*
+ANCHORS
+*/
+a {
+    color: #4441ff;
+}
+a:visited {
+    color: #00acee;
 }
 /*
 NAV BAR
@@ -19,7 +33,7 @@ nav {
     top: 0px;
     left: 0px;
 
-    background-color: rgba(183, 134, 29, 0.1);
+    background-color: var(--nav-color);
     text-align: start;
 
     width: 100%;
@@ -34,7 +48,7 @@ nav {
     transition: 0.25s;
 }
 nav:hover {
-    background-color: rgba(183, 134, 29, 0.3);
+    background-color: var(--nav-hover-color);
 }
 nav .fab, nav p img{
     margin-left: 20px;

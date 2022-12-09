@@ -5,7 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>xnotkingdev: ¿Cuál es el mejor lenguaje de programacion?</title>
-	<link rel="stylesheet" href="/blogs/main.css" type="text/css">
+    <script defer>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (!localStorage.getItem("theme")) {
+                localStorage.setItem("theme", "day")
+            }
+            if (localStorage.getItem("theme") === "dark") {
+                document.querySelector(":root").style.setProperty("--nav-color", "#282936")
+                document.querySelector(":root").style.setProperty("--nav-hover-color", "#15161c")
+                document.querySelector(":root").style.setProperty("--body-color", "#35374a")
+                document.querySelector("body").style.color = "#fff"
+                document.querySelector("nav img").src = "/cat.jpg"
+                document.querySelector("nav img").style.height = "100px"
+                document.querySelector("nav img").style.borderRadius = "50%"
+                document.querySelector("nav .githubsvg").src = "/images/github-dark.svg"
+                document.querySelectorAll("a").forEach(element => {
+                    element.style.color = "#fff"
+                })
+            }
+            if (localStorage.getItem("theme") === "custom") {
+                document.querySelector(":root").style.setProperty("--nav-color", "rgba(183, 134, 29, 0.1)")
+                document.querySelector(":root").style.setProperty("--nav-hover-color", "rgba(183, 134, 29, 0.3)")
+                document.querySelector(":root").style.setProperty("--body-color", "rgb(251, 245, 233)")
+            }
+            const changeThemeButton = document.querySelector(".theme-change")
+        })  
+    </script>
+	<link rel="stylesheet" href="/index.css" type="text/css">
     <link rel="shortcut icon" href="/cat.jpg" type="image/x-icon">
     <!-- SEO -->
     <meta name="title" content="xnotkingdev: ¿Cuál es el mejor lenguaje de programacion?">
@@ -27,53 +53,64 @@
 </head>
 <body>
     <nav>
-        <img src="../../logo.png" class="logo" onclick="location.href = '/'" decoding="async" alt="logo">
+        <img src="/logo.png" class="logo" onclick="location.href = '/'" decoding="async" alt="logo">
         <p>
-            <a href="https://github.com/xnotkingdev" target="_blank"  rel="nofollow" title="Mi github"><img src="../../github.svg" alt="Check out xnotkingdev's github"></a>
+            <a href="https://github.com/xnotkingdev" target="_blank"  rel="nofollow" title="Mi github"><img src="../../github.svg" alt="Check out xnotkingdev's github" class="githubsvg"></a>
             <a href="https://twitter.com/xnotkingdev_" rel="nofollow" target="_blank" title="Mi twitter"><img src="../../twitter.svg" alt="Check out xnotkingdev's twitter"></a>
         </p>
     </nav>
-    <main class="container">
-        <div class="content">
-            <h3 class="sec-title" style="margin-top: 200px;">¿Cuál es el mejor lenguaje de programación? (25/08/2022)</h3>
-            <p class="subtitle">
-            Hola, me llamo xNotKing, en este blog te dire cuales son los mejores lenguajes de programación para principiantes, cual es el mejor lenguaje de programación para cada cosa.
-            </p>
-            <div class="article-banner">
-                <img src="/images/BestLang.webp" class="this-blog">
-                <div class="interesanting">
-                <h3 class="sec-title interesant-banner">Reecomendado</h3>
-                <a href="../php-no-es-malo/" class="hide-link">
+    <header style="margin-top: 200px;">
+        <h1>xnotkingdev_</h1>
+        <p>¿Cuál es el mejor lenguaje de programación?</p>
+    </header>
+    <div class="article-banner">
+        <img src="/images/BestLang.webp" class="this-blog">
+        <div class="interesanting">
+            <h3 class="sec-title interesant-banner">Reecomendado</h3>
+            <a href="../php-no-es-malo/" class="hide-link">
                 <div class="other-blog">
-                    
+
                     <h3>PHP no es malo!</h3>
                     <img src="/images/PHP.webp" class="other-blog">
                 </div>
-                </a>
-                </div>
-            </div>
-            <div class="article-credit">
-                <a href="https://twitter.com/xnotkingdev_" style="color: currentColor" rel="nofollow"><i class="fab fa-twitter fa"></i></a>
-            </div>
-			<h3 class="sec-title">¿Cuál es el mejor lenguaje de programación?</h3>
-			<p>
-				Mucha gente se pregunta cual es el mejor lenguaje de programación, lo cierto es que no hay ninguno que sea el mejor, si no que unos mejores que otros u otros mas usados que otros.
-			</p>
-			<h3 class="sec-title">¿Cuál es el lenguaje de programación mas usado?</h3>
-				<p>
-					El lenguaje de programación mas usado seria JavaScript, el lenguaje nativo de la web. Tambien tenemos diferentes sectores, como si tenemos en cuenta el <a href="https://es.wikipedia.org/wiki/Front_end_y_back_end">Back-End</a>, PHP seria el claro ganador, contando con mas del 70% de las paginas. Si te preguntas para qué sirve Python, Python seria muy útil en la <a href="https://es.wikipedia.org/wiki/An%C3%A1lisis_de_datos" rel="nofollow">analisis de datos</a>, <a href="https://es.wikipedia.org/wiki/Ciencia_de_datos" rel="nofollow"> ciencia de datos</a> o hay gente que lo usa en el hacking.
-				</p>
-			<h3 class="sec-title">¿Cuál es el mejor lenguaje para principiantes?</h3>
-				<p>
-					Es difícil decir cual seria el lenguaje mas adecuado para principiantes, es mas en este blog lo que se dira es claramente objetivo.
-                </p> 
-                <p>
-                    En mi opinión, el lenguaje de programación mas adecuado para principiantes seria entre JavaScript para <a href="https://es.wikipedia.org/wiki/Front_end_y_back_end" rel="nofollow">Front-End</a> y PHP para <a href="https://es.wikipedia.org/wiki/Front_end_y_back_end" rel="nofollow">Back-End</a>.
-				</p>
-            <h3 class="sec-title">¿Dónde puedo aprenderlos?</h3>
-                <p>
-                    En <a href="https://sololearn.com" rel="nofollow">sololearn.com</a> puedes aprender HTML CSS JavaScript, PHP, incluso Python.
-                </p>
+            </a>
+        </div>
+    </div>
+    <main class="blog">
+        <div class="article-credit">
+            <a href="https://twitter.com/xnotkingdev_" style="color: currentColor" rel="nofollow"><i
+                    class="fab fa-twitter fa"></i></a>
+        </div>
+        <h3 class="sec-title">¿Cuál es el mejor lenguaje de programación?</h3>
+        <p>
+            Mucha gente se pregunta cual es el mejor lenguaje de programación, lo cierto es que no hay ninguno que sea el
+            mejor, si no que unos mejores que otros u otros mas usados que otros.
+        </p>
+        <h3 class="sec-title">¿Cuál es el lenguaje de programación mas usado?</h3>
+        <p>
+            El lenguaje de programación mas usado seria JavaScript, el lenguaje nativo de la web. Tambien tenemos diferentes
+            sectores, como si tenemos en cuenta el <a
+                href="https://es.wikipedia.org/wiki/Front_end_y_back_end">Back-End</a>, PHP seria el claro ganador, contando
+            con mas del 70% de las paginas. Si te preguntas para qué sirve Python, Python seria muy útil en la <a
+                href="https://es.wikipedia.org/wiki/An%C3%A1lisis_de_datos" rel="nofollow">analisis de datos</a>, <a
+                href="https://es.wikipedia.org/wiki/Ciencia_de_datos" rel="nofollow"> ciencia de datos</a> o hay gente que
+            lo usa en el hacking.
+        </p>
+        <h3 class="sec-title">¿Cuál es el mejor lenguaje para principiantes?</h3>
+        <p>
+            Es difícil decir cual seria el lenguaje mas adecuado para principiantes, es mas en este blog lo que se dira es
+            claramente objetivo.
+        </p>
+        <p>
+            En mi opinión, el lenguaje de programación mas adecuado para principiantes seria entre JavaScript para <a
+                href="https://es.wikipedia.org/wiki/Front_end_y_back_end" rel="nofollow">Front-End</a> y PHP para <a
+                href="https://es.wikipedia.org/wiki/Front_end_y_back_end" rel="nofollow">Back-End</a>.
+        </p>
+        <h3 class="sec-title">¿Dónde puedo aprenderlos?</h3>
+        <p>
+            En <a href="https://sololearn.com" rel="nofollow">sololearn.com</a> puedes aprender HTML CSS JavaScript, PHP,
+            incluso Python.
+        </p>
     </main>
     <footer>
         <p>

@@ -5,38 +5,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>xnotkingdev: Desarollador web</title>
-    <link rel="stylesheet" href="index.css" type="text/css">
-    <link rel="shortcut icon" href="cat.jpg" type="image/x-icon">
+    <title>xnotkingdev: Desarollador web Front-End y Back-End</title>
+    <script defer>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (!localStorage.getItem("theme")) {
+                localStorage.setItem("theme", "day")
+            }
+            if (localStorage.getItem("theme") === "dark") {
+                document.querySelector(":root").style.setProperty("--nav-color", "#282936")
+                document.querySelector(":root").style.setProperty("--nav-hover-color", "#15161c")
+                document.querySelector(":root").style.setProperty("--body-color", "#35374a")
+                document.querySelector("body").style.color = "#fff"
+                document.querySelector("nav img").src = "/cat.jpg"
+                document.querySelector("nav img").style.height = "100px"
+                document.querySelector("nav img").style.borderRadius = "50%"
+                document.querySelector("nav .githubsvg").src = "/images/github-dark.svg"
+                document.querySelectorAll("a").forEach(element => {
+                    element.style.color = "#fff"
+                })
+            }
+            if (localStorage.getItem("theme") === "custom") {
+                document.querySelector(":root").style.setProperty("--nav-color", "rgba(183, 134, 29, 0.1)")
+                document.querySelector(":root").style.setProperty("--nav-hover-color", "rgba(183, 134, 29, 0.3)")
+                document.querySelector(":root").style.setProperty("--body-color", "rgb(251, 245, 233)")
+            }
+            const changeThemeButton = document.querySelector(".theme-change")
+        })  
+    </script>
+    <link rel="stylesheet" href="/index.css" type="text/css">
+    <link rel="shortcut icon" href="/cat.jpg" type="image/x-icon">
     <!-- SEO -->
-    <meta name="title" content="xnotkingdev: Desarollador web">
-    <meta name="description"
-        content="Hola, soy xnotkingdev, un desarollador backend y frontend en Barcelona con mas de 1 año de experiencia.">
+    <meta name="title" content="xnotkingdev: Desarollador web Front-End y Back-End">
+    <meta name="description" content="Hola👋, soy xnotkingdev, un desarollador web Back-End📟 y Front-End📱 en Barcelona🏙️. Puedes visitar mi página para informarte de mis proyectos💻, tecnologías🐘 que uso y mis blogs📁.">
     <meta name="theme-color" content="#a2703f">
-    <meta name="keywords"
-        content="build your site, xnotking, xnotkingdev_, xnotkingdev, website developer, site developer, solarcraft, arduino, cafeluna, luna cafe, developers with 1 year or more of experience, hugo, php, laravel, wordpress, nodejs, typescript, bun, bun.sh, html, css, js, html css js, dev, badalona, xnotking.vercel.app, xnotking.github.io, desarollador web en barcelona, xnotkingdev desarollador web, xnotkingdev.github.io, xnotkingdev blog, xnotkingdev ">
+    <meta name="keywords" content="build your site, xnotking, xnotkingdev_, xnotkingdev, website developer, site developer, solarcraft, arduino, cafeluna, luna cafe, developers with 1 year or more of experience, hugo, php, laravel, wordpress, nodejs, typescript, bun, bun.sh, html, css, js, html css js, dev, badalona, xnotking.vercel.app, xnotking.github.io, desarollador web en barcelona, xnotkingdev desarollador web, xnotkingdev.github.io, xnotkingdev blog, react, vite, node.js, node, arduino">
     <!-- OG -->
-    <meta property="og:type" content="site">
-    <meta property="og:url" content="xnotkingdev">
-    <meta name="og:image" content="logo.png">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://xnotkingdev.github.io">
+    <meta name="og:image" content="/logo.png">
     <meta property="og:title" content="xnotkingdev">
-    <meta property="og:description"
-        content="Hola, soy xnotkingdev, un desarollador backend y frontend en Barcelona con mas de 1 año de experiencia.">
+    <meta property="og:description" content="Hola👋, soy xnotkingdev, un desarollador web Back-End📟 y Front-End📱 en Barcelona🏙️. Puedes visitar mi página para informarte de mis proyectos💻, tecnologías🐘 que uso y mis blogs📁.">
+    <meta name="og:site_name" content="xnotkingdev.github.io">
     <!-- TWITTER -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@xnotkingdev_">
     <meta name="twitter:title" content="xnotkingdev">
-    <meta name="twitter:description" content="Hola, soy xnotkingdev, un desarollador Back-End y Front-End en Barcelona.">
+    <meta name="twitter:description" content="Hola👋, soy xnotkingdev, un desarollador web Back-End📟 y Front-End📱 en Barcelona🏙️. Puedes visitar mi página para informarte de mis proyectos💻, tecnologías🐘 que uso y mis blogs📁.">
     <meta name="twitter:image" content="/cat.jpg">
 </head>
 
 <body>
     <nav>
-        <img src="/logo.webp" class="logo" decoding="async" alt="xnotkingdev web developer logo png image"
-            onclick="location.href = '/'">
+        <img src="/logo.webp" class="logo" decoding="async" alt="xnotkingdev desarollador web catalán en Barcelona." onclick="location.href = '/'">
         <p>
             <a href="https://github.com/xnotkingdev" target="_blank" rel="nofollow" title="Mi github">
-                <img src="/github.svg" alt="Echale un vistazo a el github de xnotkingdev">
+                <img src="/github.svg" alt="Echale un vistazo a el github de xnotkingdev" class="githubsvg">
             </a>
             <a href="https://twitter.com/xnotkingdev_" target="_blank" rel="nofollow" title="Mi twitter">
                 <img src="/twitter.svg" alt="Echale un vistazo a el twitter de xnotkingdev">
@@ -44,7 +68,7 @@
         </p>
     </nav>
     <header style="margin-top: 200px;">
-        <h1>xnotkingdev_</h1>
+        <h1>xnotkingdev</h1>
         <p>Desarollador web Front-End y Back-End en Barcelona.</p>
     </header>
     <main class="container">
@@ -55,7 +79,7 @@
                     <blog-card>
                         <blog-readtime>2 minutos</blog-readtime>
                         <blog-img>
-                            <img src="/images/nodeserver.webp" alt="xnotkingdev blog ¿Cómo crear un servidor web en Node.js y Express?" loading="lazy">
+                            <img src="/images/nodeserver.webp" alt="Blog de xnotkingdev de cómo crear un servidor web en Node.js y Express" loading="lazy">
                         </blog-img>
                         <blog-container>
                             <h2>¿Cómo crear un servidor web en Node.js y Express?</h2>
@@ -67,7 +91,7 @@
                     <blog-card>
                         <blog-readtime>1 minuto</blog-readtime>
                         <blog-img>
-                            <img src="/images/php-folder.svg" alt="xnotkingdev blog por qué php no es malo" loading="lazy">
+                            <img src="/images/php-folder.svg" alt="Blog de xnotkingdev en él que se explica porqué php no es malo." loading="lazy">
                         </blog-img>
                         <blog-container>
                             <h2>!PHP no es malo!</h2>
@@ -111,19 +135,17 @@
         </p>
         <h3 class="sec-title">¿Con qué trabajo?</h3>
         <p>
-            Trabajo con HTML, CSS, JavaScript (incluyendo Node.js), PHP, Wordpress, Git, Python, Astro.js.
+            Trabajo con HTML, CSS, JavaScript (incluyendo Node.js), PHP, Wordpress, Git, Python, Node.js y Astro.js.
         </p>
         <p>Tambien tengo conocimientos de React, Next y Vue.</p>
         <h3 class="sec-title">¿Cómo contactarme?</h3>
         <p>
-            Puedes contactarme por mi mail, <a href="https://mail:xnotking1@gmail.com/"
-                rel="nofollow">xnotking1@gmail.com</a> o donde tendras una respuesta mas temprana, <a
-                href="https://twitter.com/xnotkingdev_" rel="nofollow">@xnotkingdev_</a> en twitter.
+            Puedes contactarme por mi mail, <a href="https://mail:xnotking1@gmail.com/" rel="nofollow">xnotking1@gmail.com</a> o donde tendras una respuesta mas temprana, <a href="https://twitter.com/xnotkingdev_" rel="nofollow">@xnotkingdev_</a> en twitter.
         </p>
     </main>
     <footer>
         <p>
-            Hecho con <img src="heart.svg" alt="xnotkingdev heart svg"> por xnotkingdev_
+            Hecho con <img src="heart.svg" alt="xnotkingdev heart svg"> por xnotkingdev
         </p>
     </footer>
 </body>

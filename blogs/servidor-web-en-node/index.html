@@ -5,13 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>xnotkingdev: ¿Cómo crear un servidor web en Node.js?</title>
+    <script defer>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (!localStorage.getItem("theme")) {
+                localStorage.setItem("theme", "day")
+            }
+            if (localStorage.getItem("theme") === "dark") {
+                document.querySelector(":root").style.setProperty("--nav-color", "#282936")
+                document.querySelector(":root").style.setProperty("--nav-hover-color", "#15161c")
+                document.querySelector(":root").style.setProperty("--body-color", "#35374a")
+                document.querySelector("body").style.color = "#fff"
+                document.querySelector("nav img").src = "/cat.jpg"
+                document.querySelector("nav img").style.height = "100px"
+                document.querySelector("nav img").style.borderRadius = "50%"
+                document.querySelector("nav .githubsvg").src = "/images/github-dark.svg"
+                document.querySelectorAll("a").forEach(element => {
+                    element.style.color = "#fff"
+                })
+            }
+            if (localStorage.getItem("theme") === "custom") {
+                document.querySelector(":root").style.setProperty("--nav-color", "rgba(183, 134, 29, 0.1)")
+                document.querySelector(":root").style.setProperty("--nav-hover-color", "rgba(183, 134, 29, 0.3)")
+                document.querySelector(":root").style.setProperty("--body-color", "rgb(251, 245, 233)")
+            }
+            const changeThemeButton = document.querySelector(".theme-change")
+        })  
+    </script>
 	<link rel="stylesheet" href="/index.css" type="text/css">
     <link rel="shortcut icon" href="/cat.jpg" type="image/x-icon">
     <!-- SEO -->
     <meta name="title" content="xnotkingdev: Cómo crear un servidor web en Node.js">
     <meta name="description" content="Porqué PHP no es malo, explicación, mas sobre el lenguaje. xnotkingdev blog">
     <meta name="theme-color" content="#a2703f">
-    <meta name="keywords" content="build your site, xnotking, xnotkingdev_, xnotkingdev, website developer, site developer, solarcraft, arduino, cafeluna, luna cafe, developers with 1 year or more of experience, hugo, php, laravel, wordpress, nodejs, typescript, bun, bun.sh, html, css, js, html css js, dev, badalona, xnotking.vercel.app, xnotking.github.io, desarollador web en barcelona, xnotkingdev desarollador web, xnotkingdev.github.io, como abrir un servidor en node.js, como crear un servidor web en node.js">
+    <meta name="keywords" content="build your site, xnotking, xnotkingdev_, xnotkingdev, website developer, site developer, solarcraft, arduino, cafeluna, luna cafe, developers with 1 year or more of experience, hugo, php, laravel, wordpress, nodejs, typescript, bun, bun.sh, html, css, js, html css js, dev, badalona, xnotking.vercel.app, xnotking.github.io, desarollador web en barcelona, xnotkingdev desarollador web, xnotkingdev.github.io, como abrir un servidor en node.js, como crear un servidor web en node.js, node simple web server, node js web app">
     <!-- OG -->
     <meta property="og:type" content="site">
     <meta property="og:url" content="xnotkingdev.github.io">
@@ -31,7 +57,7 @@
             onclick="location.href = '/'">
         <p>
             <a href="https://github.com/xnotkingdev" target="_blank" rel="nofollow" title="Mi github">
-                <img src="/github.svg" alt="Echale un vistazo a el github de xnotkingdev">
+                <img src="/github.svg" alt="Echale un vistazo a el github de xnotkingdev" class="githubsvg">
             </a>
             <a href="https://twitter.com/xnotkingdev_" target="_blank" rel="nofollow" title="Mi twitter">
                 <img src="/twitter.svg" alt="Echale un vistazo a el twitter de xnotkingdev">
@@ -43,113 +69,135 @@
         <p>¿Cómo crear un servidor web en Node.js y Express?</p>
     </header>
     <div class="article-banner">
-        <img src="/images/nodeserver.webp" class="this-blog">
+        <img src="/images/nodeserver.webp" class="this-blog" alt="xnotkingdev ¿Cómo crear un servidor web en Node.js y Express?">
         <div class="interesting">
             <h3 class="sec-title interesant-banner">Interesante</h3>
             <a href="../cual-es-el-mejor-lenguaje/" class="hide-link">
                 <div class="other-blog">
     
                     <h3>¿Cuál es el mejor lenguaje de programación?</h3>
-                    <img src="/images/BestLang.webp" class="other-blog">
+                    <img src="/images/BestLang.webp" class="other-blog" alt="xnotkingdev ¿Cuál es el mejor lenguaje de programación?">
                 </div>
             </a>
         </div>
     </div>
-    <main role="main" itemtype="http://schema.org/Article" class="blog">
-        <h3 class="sec-title">
-            ¿Qué es Node.js?
-        </h3>
-        <p>
-            Node.js es un entorno de ejecución del lenguaje de programación JavaScript. Este <strong>entorno de ejecución</strong> necesita un programa escrito en JavaScript para ser ejecutado. Node.js es JavaScript pero del <strong>lado del servidor</strong>. En resumen, en vez de ejecutar el programa JavaScript en tu ordenador, lo ejecuta en el servidor.
-        </p>
-        <p>
-            Instala en <a href="https://nodejs.org/es/" rel="nofollow" target="_blank">https://nodejs.org/es/</a>
-        </p>
-        <h3 class="sec-title">
-            ¿Cómo puedo aprender Node.js?
-        </h3>
-        <p>
-            Antes de nada, quiero aclarar que Node.js es JavaScript, pero del lado del servidor y con algunas características, si sabes JavaScript, sabes Node.js. Si no sabes JavaScript puedes aprender en <a href="https://sololearn.com" rel="nofollow" target="_blank">SoloLearn</a>, una plataforma que me funciono un montón para aprender programación Front-End y Back-End.
-        </p>
-        <h3 class="sec-title">
-            Entonces... ¿Cómo puedo empezar el servidor web?
-        </h3>
-        <p>
-            Bueno para empezar usaremos el framework web <a href="https://www.npmjs.com/package/express" rel="nofollow" target="_blank">Express.js</a>, como digo, es un framework web para crear servidores web para Node.js. Este framework web es muy ligero (214kB) y rápido. Se centra en un buen rendimiento, cache y con un routing robusto, entre otras.
-        </p>
-        <h3 class="sec-title">
-            Empezemos a instalar Express.
-        </h3>
-        <p>
-            Para instalar Express usaremos npm, sirve para instalar todo tipo de cosas hechas por la comunidad. Además, viene instalado por defecto al instalar Node, por lo que no necesitas nada mas que instalar Node.
-        </p>
-        <p>
-            Primero crea un package.json si es un nuevo projecto con este comando:
-        </p>
-        <div class="code">
-            $ npm init
-        </div>
-        <p>
-            Después instala Express con este comando.
-        </p>
-        <div class="code">
-            $ npm install express
-        </div>
-        <p>
-            Entonces, empezemos a programar nuestro servidor web. Primero, usemos el siguiente codigo para definir Express.
-        </p>
-        <div class="code">
-            const express = require('express') <br/>
-            const app = express()
-        </div>
-        <p>
-            Aquí hemos definido Express, ahora vamos a empezar nuestro primer servidor web. Desde ahora solo usaremos la constante app para referirnos a Express, no hay que confundirse con la constante express.
-        </p>
-        <div class="code">
-            app.get('/', function (req, res) {<br />
-            res.send('¡Hola mundo!')<br />
-            })<br />
-            <br />
-            app.listen(8000)<br />
-        </div>
-        <p>
-            Aqui hemos iniciado nuestro servidor web en el puerto 8000, escuchando peticiones <bg-white>GET</bg-white>. Cuando envíes tu petición te devolvera en pantalla el texto de "¡Hola mundo!".
-        </p>
-        <p>
-            Hemos puesto un hola mundo, pero... Y si queremos tener mas páginas y renderizar archivos HTML. Para esto, usaremos lo siguiente. 
-        </p>
-        <div class="code">
-            const fs = require('fs')
-        </div>
-        <p>
-            En la primera línea del código, importamos el File System de Node, es decir el código de arriba. Ahora con esto, vamos a renderizar un archivo HTML de la siguiente forma...
-        </p>
-        <div class="code">
-            app.get('/', async function (req, res) {<br/>
-                res.send(fs.readFileSync('templates/index.html', 'utf8'))<br/>
-            })<br/>
-            <br/>
-            app.listen(8000)
-        </div>
-        <p>
-            En el codigo de arriba estamos haciendo una función asíncrona en la que se renderiza el archivo <bg-white>index.html</bg-white>, en la carpeta <bg-white>templates/</bg-white>.
-        </p>
-        <p>
-            Ahora, si queremos añadir varias páginas, lo que tendríamos que hacer es definir varios routes, de la siguiente manera...
-        </p>
-        <div class="code">
-            app.get('/', async function (req, res) {<br/>
-                res.send(fs.readFileSync('templates/index.html', 'utf8'))<br/>
-            })<br/>
-            app.get('/sobremi', async function (req, res) {<br/>
-                res.send(fs.readFileSync('templates/sobremi.html', 'utf8'))<br/>
-            })<br/>
-            <br/>
-            app.listen(8000)
-        </div>
-        <p>
-            De esta manera, cuando accedas a <bg-white>localhost:8000/sobremi</bg-white>, te renderizara el archivo HTML especificado.
-        </p>
-    </main>
+    <article role="main" itemscope itemtype="http://schema.org/Article" class="blog">
+        <meta itemprop="dataPublised" content="2022-12-05">
+        <meta itemprop="image" content="/images/nodeserver.webp">
+        <meta itemprop="publisher" content="xnotkingdev">
+            <section itemprop="articleBody">
+                <h3 class="sec-title">
+                    ¿Qué es Node.js?
+                </h3>
+                <p>
+                    Node.js es un entorno de ejecución del lenguaje de programación JavaScript. Este <strong>entorno de
+                        ejecución</strong> necesita un programa escrito en JavaScript para ser ejecutado. Node.js es JavaScript pero
+                    del <strong>lado del servidor</strong>. En resumen, en vez de ejecutar el programa JavaScript en tu ordenador,
+                    lo ejecuta en el servidor.
+                </p>
+                <p>
+                    Instala en <a href="https://nodejs.org/es/" rel="nofollow" target="_blank">https://nodejs.org/es/</a>
+                </p>
+                <h3 class="sec-title">
+                    ¿Cómo puedo aprender Node.js?
+                </h3>
+                <p>
+                    Antes de nada, quiero aclarar que Node.js es JavaScript, pero del lado del servidor y con algunas
+                    características, si sabes JavaScript, sabes Node.js. Si no sabes JavaScript puedes aprender en <a
+                        href="https://sololearn.com" rel="nofollow" target="_blank">SoloLearn</a>, una plataforma que me funciono un
+                    montón para aprender programación Front-End y Back-End.
+                </p>
+                <h3 class="sec-title">
+                    Entonces... ¿Cómo puedo empezar el servidor web?
+                </h3>
+                <p>
+                    Bueno para empezar usaremos el framework web <a href="https://www.npmjs.com/package/express" rel="nofollow"
+                        target="_blank">Express.js</a>, como digo, es un framework web para crear servidores web para Node.js. Este
+                    framework web es muy ligero (214kB) y rápido. Se centra en un buen rendimiento, cache y con un routing robusto,
+                    entre otras.
+                </p>
+                <h3 class="sec-title">
+                    Empezemos a instalar Express.
+                </h3>
+                <p>
+                    Para instalar Express usaremos npm, sirve para instalar todo tipo de cosas hechas por la comunidad. Además,
+                    viene instalado por defecto al instalar Node, por lo que no necesitas nada mas que instalar Node.
+                </p>
+                <p>
+                    Primero crea un package.json si es un nuevo projecto con este comando:
+                </p>
+                <div class="code">
+                    $ npm init
+                </div>
+                <p>
+                    Después instala Express con este comando.
+                </p>
+                <div class="code">
+                    $ npm install express
+                </div>
+                <p>
+                    Entonces, empezemos a programar nuestro servidor web. Primero, usemos el siguiente codigo para definir Express.
+                </p>
+                <div class="code">
+                    const express = require('express') <br />
+                    const app = express()
+                </div>
+                <p>
+                    Aquí hemos definido Express, ahora vamos a empezar nuestro primer servidor web. Desde ahora solo usaremos la
+                    constante app para referirnos a Express, no hay que confundirse con la constante express.
+                </p>
+                <div class="code">
+                    app.get('/', function (req, res) {<br />
+                    res.send('¡Hola mundo!')<br />
+                    })<br />
+                    <br />
+                    app.listen(8000)<br />
+                </div>
+                <p>
+                    Aqui hemos iniciado nuestro servidor web en el puerto 8000, escuchando peticiones <bg-white>GET</bg-white>.
+                    Cuando envíes tu petición te devolvera en pantalla el texto de "¡Hola mundo!".
+                </p>
+                <p>
+                    Hemos puesto un hola mundo, pero... Y si queremos tener mas páginas y renderizar archivos HTML. Para esto,
+                    usaremos lo siguiente.
+                </p>
+                <div class="code">
+                    const fs = require('fs')
+                </div>
+                <p>
+                    En la primera línea del código, importamos el File System de Node, es decir el código de arriba. Ahora con esto,
+                    vamos a renderizar un archivo HTML de la siguiente forma...
+                </p>
+                <div class="code">
+                    app.get('/', async function (req, res) {<br />
+                    res.send(fs.readFileSync('templates/index.html', 'utf8'))<br />
+                    })<br />
+                    <br />
+                    app.listen(8000)
+                </div>
+                <p>
+                    En el codigo de arriba estamos haciendo una función asíncrona en la que se renderiza el archivo
+                    <bg-white>index.html</bg-white>, en la carpeta <bg-white>templates/</bg-white>.
+                </p>
+                <p>
+                    Ahora, si queremos añadir varias páginas, lo que tendríamos que hacer es definir varios routes, de la siguiente
+                    manera...
+                </p>
+                <div class="code">
+                    app.get('/', async function (req, res) {<br />
+                    res.send(fs.readFileSync('templates/index.html', 'utf8'))<br />
+                    })<br />
+                    app.get('/sobremi', async function (req, res) {<br />
+                    res.send(fs.readFileSync('templates/sobremi.html', 'utf8'))<br />
+                    })<br />
+                    <br />
+                    app.listen(8000)
+                </div>
+                <p>
+                    De esta manera, cuando accedas a <bg-white>localhost:8000/sobremi</bg-white>, te renderizara el archivo HTML
+                    especificado.
+                </p>
+            </section>
+    </article>
 </body>
 </html>

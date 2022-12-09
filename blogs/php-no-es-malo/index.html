@@ -5,7 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>xnotkingdev: Porqué PHP no es malo.</title>
-	<link rel="stylesheet" href="/blogs/main.css" type="text/css">
+    <script defer>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (!localStorage.getItem("theme")) {
+                localStorage.setItem("theme", "day")
+            }
+            if (localStorage.getItem("theme") === "dark") {
+                document.querySelector(":root").style.setProperty("--nav-color", "#282936")
+                document.querySelector(":root").style.setProperty("--nav-hover-color", "#15161c")
+                document.querySelector(":root").style.setProperty("--body-color", "#35374a")
+                document.querySelector("body").style.color = "#fff"
+                document.querySelector("nav img").src = "/cat.jpg"
+                document.querySelector("nav img").style.height = "100px"
+                document.querySelector("nav img").style.borderRadius = "50%"
+                document.querySelector("nav .githubsvg").src = "/images/github-dark.svg"
+                document.querySelectorAll("a").forEach(element => {
+                    element.style.color = "#fff"
+                })
+            }
+            if (localStorage.getItem("theme") === "custom") {
+                document.querySelector(":root").style.setProperty("--nav-color", "rgba(183, 134, 29, 0.1)")
+                document.querySelector(":root").style.setProperty("--nav-hover-color", "rgba(183, 134, 29, 0.3)")
+                document.querySelector(":root").style.setProperty("--body-color", "rgb(251, 245, 233)")
+            }
+            const changeThemeButton = document.querySelector(".theme-change")
+        })  
+    </script>
+	<link rel="stylesheet" href="/index.css" type="text/css">
     <link rel="shortcut icon" href="/cat.jpg" type="image/x-icon">
     <!-- SEO -->
     <meta name="title" content="xnotkingdev: Porqué PHP no es malo.">
@@ -31,51 +57,53 @@
             onclick="location.href = '/'">
         <p>
             <a href="https://github.com/xnotkingdev" target="_blank" rel="nofollow" title="Mi github">
-                <img src="/github.svg" alt="Echale un vistazo a el github de xnotkingdev">
+                <img src="/github.svg" alt="Echale un vistazo a el github de xnotkingdev" class="githubsvg">
             </a>
             <a href="https://twitter.com/xnotkingdev_" target="_blank" rel="nofollow" title="Mi twitter">
                 <img src="/twitter.svg" alt="Echale un vistazo a el twitter de xnotkingdev">
             </a>
         </p>
     </nav>
-    <main class="container" role="main">
-        <div class="content" itemtype="http://schema.org/Article">
-            <h3 class="sec-title" style="margin-top: 200px;">PHP no es malo! (17/07/2022)</h3>
-            <p class="subtitle">
-            Hola, me llamo xNotKing, en este blog te dire por que la gente dice que PHP es malo y esta muerto, demostrare que aquellos no tienen razón y dire porqué.
-            </p>
-            <div class="article-banner">
-                <img src="/images/PHP.webp" class="this-blog">
-                <div class="interesting">
-                    <h3 class="sec-title interesant-banner">Interesante</h3>
-                    <a href="../cual-es-el-mejor-lenguaje/" class="hide-link">
-                        <div class="other-blog">
-            
-                            <h3>¿Cuál es el mejor lenguaje de programación?</h3>
-                            <img src="/images/BestLang.webp" class="other-blog">
-                        </div>
-                    </a>
+    <header style="margin-top: 200px;">
+        <h1>xnotkingdev_</h1>
+        <p>¡PHP no es malo! (17/07/2022)</p>
+    </header>
+    <div class="article-banner">
+        <img src="/images/PHP.webp" class="this-blog">
+        <div class="interesting">
+            <h3 class="sec-title interesant-banner">Interesante</h3>
+            <a href="../cual-es-el-mejor-lenguaje/" class="hide-link">
+                <div class="other-blog">
+    
+                    <h3>¿Cuál es el mejor lenguaje de programación?</h3>
+                    <img src="/images/BestLang.webp" class="other-blog">
                 </div>
-            </div>
-            <div class="article-credit">
-            	<a href="https://twitter.com/xnotkingdev_" rel="nofollow" style="color: currentColor"><i class="fab fa-twitter fa"></i></a>
-            </div>
-			<h3 class="sec-title">1. Por qué PHP no esta muerto?</h3>
-			<p>
-				La gente suele decir que PHP esta muerto, pero realmente no tienen ni idea, PHP es el lenguaje backend mas usado del planeta, y sera asi mientras que WordPress siga usando PHP, actualmente mas de el 70% de las paginas usan PHP, incluyendo Wikipedia, wordpress, facebook y otras muy conocidas asi que si crees que python o node.js es mas popular en el backend que php, probablemente deberias dejar de ser desarollador.
-					</p>
-			<h3 class="sec-title">2. Por qué PHP no es malo?</h3>
-				<p>
-					Cada uno tiene sus gustos, el problema es que hay gente que sin probar PHP dice que es malo y se niega a cambiar su opinión y ni siquiera dan argumentos.<br>
-					En mi opinión PHP es <strong>el mejor lenguaje</strong> en cuanto a todo del backend y te dire por qué:<br><br>
-					1. Empieza un servidor web <strong>con una sola línea</strong>, php -S 0.0.0.0:8080 -t .<br>
-					2. Es muy facil de usar y una sintaxis basada en C.<br>
-					3. No tendras que usar un file system o renderer para mostrar cada archivo.
-				</p>
-			<h3 class="sec-title">3. Mi opinión</h3>
-				<p>
-					Yo opino que el mejor lenguaje backend es PHP, aparte es un lenguaje que aprecio ya que fue el primer lenguaje que aprendí. Cada uno tiene sus gustos, no digo que la gente tenga que gustarle PHP, pero todos tienen que estar de acuerdo en que no esta muerto.
-				</p>
+            </a>
+        </div>
+    </div>
+    <main class="blog" role="main" itemtype="http://schema.org/Article">
+        <h3 class="sec-title">1. Por qué PHP no esta muerto?</h3>
+        <p>
+            La gente suele decir que PHP esta muerto, pero realmente no tienen ni idea, PHP es el lenguaje backend mas usado
+            del planeta, y sera asi mientras que WordPress siga usando PHP, actualmente mas de el 70% de las paginas usan
+            PHP, incluyendo Wikipedia, wordpress, facebook y otras muy conocidas asi que si crees que python o node.js es
+            mas popular en el backend que php, probablemente deberias dejar de ser desarollador.
+        </p>
+        <h3 class="sec-title">2. Por qué PHP no es malo?</h3>
+        <p>
+            Cada uno tiene sus gustos, el problema es que hay gente que sin probar PHP dice que es malo y se niega a cambiar
+            su opinión y ni siquiera dan argumentos.<br>
+            En mi opinión PHP es <strong>el mejor lenguaje</strong> en cuanto a todo del backend y te dire por qué:<br><br>
+            1. Empieza un servidor web <strong>con una sola línea</strong>, php -S 0.0.0.0:8080 -t .<br>
+            2. Es muy facil de usar y una sintaxis basada en C.<br>
+            3. No tendras que usar un file system o renderer para mostrar cada archivo.
+        </p>
+        <h3 class="sec-title">3. Mi opinión</h3>
+        <p>
+            Yo opino que el mejor lenguaje backend es PHP, aparte es un lenguaje que aprecio ya que fue el primer lenguaje
+            que aprendí. Cada uno tiene sus gustos, no digo que la gente tenga que gustarle PHP, pero todos tienen que estar
+            de acuerdo en que no esta muerto.
+        </p>
     </main>
     <footer role="footer" aria>
         <p>
