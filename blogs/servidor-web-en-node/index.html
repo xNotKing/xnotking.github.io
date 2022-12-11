@@ -6,30 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>xnotkingdev: ¿Cómo crear un servidor web en Node.js?</title>
     <script defer>
-        document.addEventListener("DOMContentLoaded", () => {
-            if (!localStorage.getItem("theme")) {
-                localStorage.setItem("theme", "day")
-            }
-            if (localStorage.getItem("theme") === "dark") {
-                document.querySelector(":root").style.setProperty("--nav-color", "#282936")
-                document.querySelector(":root").style.setProperty("--nav-hover-color", "#15161c")
-                document.querySelector(":root").style.setProperty("--body-color", "#35374a")
-                document.querySelector("body").style.color = "#fff"
-                document.querySelector("nav img").src = "/cat.jpg"
-                document.querySelector("nav img").style.height = "100px"
-                document.querySelector("nav img").style.borderRadius = "50%"
-                document.querySelector("nav .githubsvg").src = "/images/github-dark.svg"
-                document.querySelectorAll("a").forEach(element => {
-                    element.style.color = "#fff"
-                })
-            }
-            if (localStorage.getItem("theme") === "custom") {
-                document.querySelector(":root").style.setProperty("--nav-color", "rgba(183, 134, 29, 0.1)")
-                document.querySelector(":root").style.setProperty("--nav-hover-color", "rgba(183, 134, 29, 0.3)")
-                document.querySelector(":root").style.setProperty("--body-color", "rgb(251, 245, 233)")
-            }
-            const changeThemeButton = document.querySelector(".theme-change")
-        })  
+    document.addEventListener("DOMContentLoaded",(()=>{let e=localStorage.getItem("theme");e||localStorage.setItem("theme","white"),"dark"===e&&(document.querySelector(":root").style.setProperty("--nav-color","#282936"),document.querySelector(":root").style.setProperty("--nav-hover-color","#15161c"),document.querySelector(":root").style.setProperty("--body-color","#35374a"),document.querySelector("body").style.color="#fff",document.querySelector("nav img").src="/cat.jpg",document.querySelector("nav img").style.height="100px",document.querySelector("nav img").style.borderRadius="50%",document.querySelector("nav .githubsvg").src="/images/github-dark.svg",document.querySelectorAll("a").forEach((e=>{e.style.color="#fff"}))),"custom"===e&&(document.querySelector(":root").style.setProperty("--nav-color","rgba(183, 134, 29, 0.1)"),document.querySelector(":root").style.setProperty("--nav-hover-color","rgba(183, 134, 29, 0.3)"),document.querySelector(":root").style.setProperty("--body-color","rgb(251, 245, 233)"));document.querySelector(".theme-change").addEventListener("click",(()=>"dark"==e?(e="custom",localStorage.setItem("theme","custom"),document.querySelector(":root").style.setProperty("--nav-color","rgba(183, 134, 29, 0.1)"),document.querySelector(":root").style.setProperty("--nav-hover-color","rgba(183, 134, 29, 0.3)"),document.querySelector(":root").style.setProperty("--body-color","rgb(251, 245, 233)"),document.querySelector("body").style.color="#000",document.querySelectorAll("a").forEach((e=>{e.style.color="#000"})),document.querySelector("nav img").src="/logo.png",document.querySelector("nav img").style.height="120px",document.querySelector("nav img").style.borderRadius="0%",void(document.querySelector("nav .githubsvg").src="github.svg")):"white"==e?(e="dark",localStorage.setItem("theme","dark"),document.querySelector(":root").style.setProperty("--nav-color","#282936"),document.querySelector(":root").style.setProperty("--nav-hover-color","#15161c"),document.querySelector(":root").style.setProperty("--body-color","#35374a"),document.querySelector("body").style.color="#fff",document.querySelector("nav img").src="/cat.jpg",document.querySelector("nav img").style.height="100px",document.querySelector("nav img").style.borderRadius="50%",document.querySelector("nav .githubsvg").src="/images/github-dark.svg",void document.querySelectorAll("a").forEach((e=>{e.style.color="#fff"}))):"custom"==e?(e="white",localStorage.setItem("theme","white"),document.querySelector(":root").style.setProperty("--nav-color","#ededed"),document.querySelector(":root").style.setProperty("--nav-hover-color","#e3e3e3"),document.querySelector(":root").style.setProperty("--body-color","#fafafa"),document.querySelector("body").style.color="#000",document.querySelectorAll("a").forEach((e=>{e.style.color="#000"})),document.querySelector("nav img").src="/logo.png",document.querySelector("nav img").style.height="120px",document.querySelector("nav img").style.borderRadius="0%",void(document.querySelector("nav .githubsvg").src="github.svg")):void 0))}));  
     </script>
 	<link rel="stylesheet" href="/index.css" type="text/css">
     <link rel="shortcut icon" href="/cat.jpg" type="image/x-icon">
@@ -67,6 +44,11 @@
     <header style="margin-top: 200px;">
         <h1>xnotkingdev_</h1>
         <p>¿Cómo crear un servidor web en Node.js y Express?</p>
+        <button class="theme-change"> 
+            <img src="/images/light-theme.svg" alt="xnotkingdev light theme para mi blog" loading="lazy"> 
+            <img src="/images/dark-theme.svg" alt="xnotkingdev dark theme para mi blog" loading="lazy"> 
+            <img src="/images/custom-theme.svg" alt="xnotkingdev custom theme para mi blog" loading="lazy"> 
+        </button>
     </header>
     <div class="article-banner">
         <img src="/images/nodeserver.webp" class="this-blog" alt="xnotkingdev ¿Cómo crear un servidor web en Node.js y Express?">

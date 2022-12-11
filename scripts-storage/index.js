@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     let theme = localStorage.getItem("theme")
     if (!theme) {
-        localStorage.setItem("theme", "day")
+        localStorage.setItem("theme", "white")
     }
     if (theme === "dark") {
         document.querySelector(":root").style.setProperty("--nav-color", "#282936")
