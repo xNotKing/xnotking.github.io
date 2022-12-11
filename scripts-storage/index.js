@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector("nav img").src = "/logo.png"
             document.querySelector("nav img").style.height = "120px"
             document.querySelector("nav img").style.borderRadius = "0%"
-            document.querySelector("nav .githubsvg").src = "github.svg"
+            document.querySelector("nav .githubsvg").src = "/github.svg"
             return
         }
         if (theme == "white") {
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelector("nav img").src = "/logo.png"
             document.querySelector("nav img").style.height = "120px"
             document.querySelector("nav img").style.borderRadius = "0%"
-            document.querySelector("nav .githubsvg").src = "github.svg"
+            document.querySelector("nav .githubsvg").src = "/github.svg"
             return
         }
         
