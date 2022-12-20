@@ -8,9 +8,10 @@
     <title>xnotkingdev: Desarollador web Front-End y Back-End</title>
     <script defer>
     document.addEventListener("DOMContentLoaded",()=>{let e=localStorage.getItem("theme");e||localStorage.setItem("theme","white"),"dark"===e&&(document.querySelector(":root").style.setProperty("--nav-color","#282936"),document.querySelector(":root").style.setProperty("--nav-hover-color","#15161c"),document.querySelector(":root").style.setProperty("--body-color","#35374a"),document.querySelector("body").style.color="#fff",document.querySelector("nav img").src="/cat.jpg",document.querySelector("nav img").style.height="100px",document.querySelector("nav img").style.borderRadius="50%",document.querySelector("nav .githubsvg").src="/images/github-dark.svg",document.querySelectorAll("a").forEach(e=>{e.style.color="#fff"})),"custom"===e&&(document.querySelector(":root").style.setProperty("--nav-color","rgba(183, 134, 29, 0.1)"),document.querySelector(":root").style.setProperty("--nav-hover-color","rgba(183, 134, 29, 0.3)"),document.querySelector(":root").style.setProperty("--body-color","rgb(251, 245, 233)"));let r=document.querySelector(".theme-change");r.addEventListener("click",()=>{if("dark"==e){e="custom",localStorage.setItem("theme","custom"),document.querySelector(":root").style.setProperty("--nav-color","rgba(183, 134, 29, 0.1)"),document.querySelector(":root").style.setProperty("--nav-hover-color","rgba(183, 134, 29, 0.3)"),document.querySelector(":root").style.setProperty("--body-color","rgb(251, 245, 233)"),document.querySelector("body").style.color="#000",document.querySelectorAll("a").forEach(e=>{e.style.color="#000"}),document.querySelector("nav img").src="/logo.png",document.querySelector("nav img").style.height="120px",document.querySelector("nav img").style.borderRadius="0%",document.querySelector("nav .githubsvg").src="/github.svg";return}if("white"==e){e="dark",localStorage.setItem("theme","dark"),document.querySelector(":root").style.setProperty("--nav-color","#282936"),document.querySelector(":root").style.setProperty("--nav-hover-color","#15161c"),document.querySelector(":root").style.setProperty("--body-color","#35374a"),document.querySelector("body").style.color="#fff",document.querySelector("nav img").src="/cat.jpg",document.querySelector("nav img").style.height="100px",document.querySelector("nav img").style.borderRadius="50%",document.querySelector("nav .githubsvg").src="/images/github-dark.svg",document.querySelectorAll("a").forEach(e=>{e.style.color="#fff"});return}if("custom"==e){e="white",localStorage.setItem("theme","white"),document.querySelector(":root").style.setProperty("--nav-color","#ededed"),document.querySelector(":root").style.setProperty("--nav-hover-color","#e3e3e3"),document.querySelector(":root").style.setProperty("--body-color","#fafafa"),document.querySelector("body").style.color="#000",document.querySelectorAll("a").forEach(e=>{e.style.color="#000"}),document.querySelector("nav img").src="/logo.png",document.querySelector("nav img").style.height="120px",document.querySelector("nav img").style.borderRadius="0%",document.querySelector("nav .githubsvg").src="/github.svg";return}})});
+    navigator.serviceWorker.register('sw.js');
     </script>
-    <link rel="stylesheet" href="/index.css" type="text/css">
-    <link rel="shortcut icon" href="/cat.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="/index.css?v=1" type="text/css">
+    <link rel="shortcut icon" href="/cat.jpg?v=1" type="image/x-icon">
     <!-- SEO -->
     <meta name="title" content="xnotkingdev: Desarollador web Front-End y Back-End">
     <meta name="description" content="Hola👋, soy xnotkingdev, un desarollador web Back-End📟 y Front-End📱 en Barcelona🏙️. Puedes visitar mi página para informarte de mis proyectos💻, tecnologías🐘 que uso y mis blogs📁.">
@@ -20,7 +21,7 @@
     <meta property="og:locale" content="es_ES">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://xnotkingdev.github.io">
-    <meta name="og:image" content="/logo.png">
+    <meta name="og:image" content="/logo.webp">
     <meta property="og:title" content="xnotkingdev">
     <meta property="og:description" content="Hola👋, soy xnotkingdev, un desarollador web Back-End📟 y Front-End📱 en Barcelona🏙️. Puedes visitar mi página para informarte de mis proyectos💻, tecnologías🐘 que uso y mis blogs📁.">
     <meta name="og:site_name" content="xnotkingdev.github.io">
@@ -37,16 +38,16 @@
         <img src="/logo.webp" class="logo" decoding="async" alt="xnotkingdev desarollador web catalán en Barcelona." onclick="location.href = '/'">
         <p>
             <a href="https://github.com/xnotkingdev" target="_blank" rel="nofollow" title="Mi github">
-                <img src="/github.svg" alt="Echale un vistazo a el github de xnotkingdev" class="githubsvg">
+                <img src="/github.svg" alt="Echale un vistazo a el github de xnotkingdev desarollador web en Barcelona" class="githubsvg">
             </a>
             <a href="https://twitter.com/xnotkingdev_" target="_blank" rel="nofollow" title="Mi twitter">
-                <img src="/twitter.svg" alt="Echale un vistazo a el twitter de xnotkingdev">
+                <img src="/twitter.svg" alt="Echale un vistazo a el twitter de xnotkingdev desarollador web en Barcelona">
             </a>
         </p>
     </nav>
     <header style="margin-top: 200px;">
         <h1>xnotkingdev</h1>
-        <p>Desarollador web Front-End y Back-End en Barcelona.</p>
+        <p style="margin-bottom: 40px;">Desarollador web Front-End y Back-End en Barcelona.</p>
         <button class="theme-change"> 
             <img src="/images/light-theme.svg" alt="xnotkingdev light theme para mi blog" loading="lazy"> 
             <img src="/images/dark-theme.svg" alt="xnotkingdev dark theme para mi blog" loading="lazy"> 
@@ -56,7 +57,7 @@
     <main class="container">
         <div class="content">
             <h3 class="sec-title">Últimos blogs</h3>
-            <article class="blogs">
+            <article class="blogs" id="blogs">
                 <a href="/blogs/servidor-web-en-node/">
                     <blog-card>
                         <blog-readtime>2 minutos</blog-readtime>
@@ -95,7 +96,7 @@
                 </a>
             </article>
         </div>
-        <h3 class="sec-title">Recomiendo</h3>
+        <h3 class="sec-title" id="recomendado">Recomiendo</h3>
         <article class="blogs recommended">
            <a href="https://sololearn.com" rel="nofollow" target="_blank">
                 <blog-card>
@@ -110,20 +111,21 @@
            </a>
         </article>
         </div>
-        <h3 class="sec-title">¿Quién soy?</h3>
-        <p>
-            Soy un programador web catalán con mas de 1 año de experiencia en el desarrollo de aplicaciones web. Me
-            gusta ayudar a otras personas con sus projectos o dudas dentro del desarollo web.
-        </p>
-        <h3 class="sec-title">¿Con qué trabajo?</h3>
-        <p>
-            Trabajo con HTML, CSS, JavaScript (incluyendo Node.js), PHP, Wordpress, Git, Python, Node.js y Astro.js.
-        </p>
-        <p>Tambien tengo conocimientos de React, Next y Vue.</p>
-        <h3 class="sec-title">¿Cómo contactarme?</h3>
-        <p>
-            Puedes contactarme por mi mail, <a href="https://mail:xnotking1@gmail.com/" rel="nofollow">xnotking1@gmail.com</a> o donde tendras una respuesta mas temprana, <a href="https://twitter.com/xnotkingdev_" rel="nofollow">@xnotkingdev_</a> en twitter.
-        </p>
+        <section id="info">
+            <h3 class="sec-title">Sobre mí</h3>
+            <p>
+                Soy un programador web catalán en Barcelona con mas de 1 año de experiencia en el desarrollo de aplicaciones web. Me gusta ayudar a otras personas con sus projectos o dudas dentro del desarollo web.
+            </p>
+            <h3 class="sec-title">¿Con qué trabajo?</h3>
+            <p>
+                Trabajo con HTML, CSS, JavaScript (incluyendo Node.js), PHP, Wordpress, Git, Python, Node.js y Astro.js.
+            </p>
+            <p>Tambien tengo conocimientos de React, Next y Vue.</p>
+            <h3 class="sec-title">¿Cómo contactarme?</h3>
+            <p>
+                Puedes contactarme por mi mail, <a href="https://mail:xnotking1@gmail.com/" rel="nofollow">xnotking1@gmail.com</a> o donde tendras una respuesta mas temprana, <a href="https://twitter.com/xnotkingdev_" rel="nofollow">@xnotkingdev_</a> en twitter.
+            </p>
+        </section>
     </main>
     <footer>
         <p>
